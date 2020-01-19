@@ -1,17 +1,7 @@
 import React from 'react';
-import moment from "moment"
+import { getDuration } from "../../utils/utils"
 
-const ActivityPanel: React.FC<{ activityLog: any; }> = ({activityLog}) => {
-
-  const formatDuration = (duration: number) => {
-    return moment.utc(duration * 1000).format('HH:mm:ss')
-  }
-
-  const getDuration = (startTime: string, stopTime: string) => {
-    let duration = moment.utc(stopTime, "HH:mm:ss").diff(moment.utc(startTime, "HH:mm:ss"), 'seconds');
-    return formatDuration(duration) !== "Invalid date" ? formatDuration(duration) : ""
-  }
-
+const ActivityPanel: React.FC<{ activityLog: any; }> = ({ activityLog }) => {
   return (
     <table className="activity-panel">
       <tr className="activity-panel__activity">
