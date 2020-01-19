@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/static/css/main.cde19557.chunk.css",
-    "main.js": "/static/js/main.a487daa7.chunk.js",
-    "main.js.map": "/static/js/main.a487daa7.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.28be1865.js",
-    "runtime-main.js.map": "/static/js/runtime-main.28be1865.js.map",
-    "static/js/2.3cc05626.chunk.js": "/static/js/2.3cc05626.chunk.js",
-    "static/js/2.3cc05626.chunk.js.map": "/static/js/2.3cc05626.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.a2453741323746ce81416e346bf8622c.js": "/precache-manifest.a2453741323746ce81416e346bf8622c.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/main.cde19557.chunk.css.map": "/static/css/main.cde19557.chunk.css.map",
-    "static/js/2.3cc05626.chunk.js.LICENSE": "/static/js/2.3cc05626.chunk.js.LICENSE"
+    "main.css": "//anthenywells.github.io/react-activity-tracker/static/css/main.cde19557.chunk.css",
+    "main.js": "//anthenywells.github.io/react-activity-tracker/static/js/main.669063b2.chunk.js",
+    "main.js.map": "//anthenywells.github.io/react-activity-tracker/static/js/main.669063b2.chunk.js.map",
+    "runtime-main.js": "//anthenywells.github.io/react-activity-tracker/static/js/runtime-main.946d7c44.js",
+    "runtime-main.js.map": "//anthenywells.github.io/react-activity-tracker/static/js/runtime-main.946d7c44.js.map",
+    "static/js/2.3cc05626.chunk.js": "//anthenywells.github.io/react-activity-tracker/static/js/2.3cc05626.chunk.js",
+    "static/js/2.3cc05626.chunk.js.map": "//anthenywells.github.io/react-activity-tracker/static/js/2.3cc05626.chunk.js.map",
+    "index.html": "//anthenywells.github.io/react-activity-tracker/index.html",
+    "precache-manifest.0e5518665d9362f02008e8addee297e0.js": "//anthenywells.github.io/react-activity-tracker/precache-manifest.0e5518665d9362f02008e8addee297e0.js",
+    "service-worker.js": "//anthenywells.github.io/react-activity-tracker/service-worker.js",
+    "static/css/main.cde19557.chunk.css.map": "//anthenywells.github.io/react-activity-tracker/static/css/main.cde19557.chunk.css.map",
+    "static/js/2.3cc05626.chunk.js.LICENSE": "//anthenywells.github.io/react-activity-tracker/static/js/2.3cc05626.chunk.js.LICENSE"
   },
   "entrypoints": [
-    "static/js/runtime-main.28be1865.js",
+    "static/js/runtime-main.946d7c44.js",
     "static/js/2.3cc05626.chunk.js",
     "static/css/main.cde19557.chunk.css",
-    "static/js/main.a487daa7.chunk.js"
+    "static/js/main.669063b2.chunk.js"
   ]
 }
