@@ -1,9 +1,10 @@
 import React from 'react';
 import { getDuration } from "../../utils/utils"
+import "./ActivityPanel.scss"
 
 const ActivityPanel: React.FC<{ activityLog: any; }> = ({ activityLog }) => {
   return (
-    <table className="activity-panel">
+    <table className="activity-panel box mobile">
       <tr className="activity-panel__activity">
         <th>description</th>
         <th>start time</th>

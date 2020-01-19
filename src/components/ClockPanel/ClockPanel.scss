@@ -1,0 +1,13 @@
+.clock-panel {
+  justify-content: space-between;
+  &__input {
+    width: 70%;
+    font-size: 1rem;
+    border: none;
+    margin-right: 1rem;
+    padding: 1rem;
+    border-radius: 5px;
+    display: flex;
+    align-self: flex-end;
+  }
+}

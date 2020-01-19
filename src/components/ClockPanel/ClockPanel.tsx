@@ -2,6 +2,7 @@ import React from 'react';
 import moment from "moment"
 import ActivityPanel from '../ActivityPanel/ActivityPanel';
 import {useLocalStorage} from "../../hooks/hooks"
+import "./ClockPanel.scss"
 
 const ClockPanel: React.FC = () => {
   const [activityStarted, setActivityStarted] = useLocalStorage("activity", false);
@@ -33,7 +34,7 @@ const ClockPanel: React.FC = () => {
 
   return (
     <>
-      <div className="clock-panel">
+      <div className="clock-panel box mobile">
         <input
           className="clock-panel__input"
           type="text"
@@ -44,14 +45,14 @@ const ClockPanel: React.FC = () => {
         />
         {!activityStarted ? (
           <button
-            className="clock-panel__button primary"
+            className="button primary"
             onClick={() => { startActivity() }}
             disabled={activityStarted}>
             Start Activity
           </button>
         ) : (
             <button
-              className="clock-panel__button danger"
+              className="button danger"
               onClick={() => { stopActivity() }}
               disabled={!activityStarted}>
               Stop Activity
