@@ -1,5 +1,5 @@
 import React from 'react';
-import ClockPanel from "./ClockPanel/ClockPanel"
+import ClockPanel from "./components/ClockPanel/ClockPanel"
 import './App.css';
 
 const App: React.FC = () => {

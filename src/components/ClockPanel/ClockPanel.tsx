@@ -1,40 +1,35 @@
-import React, { useState } from 'react';
+import React from 'react';
 import moment from "moment"
 import ActivityPanel from '../ActivityPanel/ActivityPanel';
+import {useLocalStorage} from "../../hooks/hooks"
 
 const ClockPanel: React.FC = () => {
-  const [activityStarted, setActivityStarted] = useState(false);
-  const [startTime, setStartTime] = useState("");
-  const [description, setDescription] = useState("");
+  const [activityStarted, setActivityStarted] = useLocalStorage("activity", false);
+  const [activityLog, setActivityLog] = useLocalStorage("activityLog", []);
+  const [startTime, setStartTime] = useLocalStorage("startTime", "");
+  const [description, setDescription] = useLocalStorage("desc","");
 
-  let activityLog: any[] = JSON.parse(localStorage.getItem("activityLog") || '[]');
 
   const startActivity = () => {
-    activityLog = JSON.parse(localStorage.getItem("activityLog") || '[]')
-    let activity = {
-      startTime: moment().format("HH:mm:ss"),
-      stopTime: "",
-      description: description
-    }
-    activityLog.push(activity);
-    setStartTime(activity.startTime)
-    localStorage.setItem("activityLog", JSON.stringify(activityLog))
+    const startTime = moment().format("HH:mm:ss")
+    setActivityLog((activityLog: Array<any>) => [...activityLog, { description, startTime, stopTime: "" }])
+    setStartTime(startTime)
     setActivityStarted(!activityStarted);
   }
 
   const stopActivity = () => {
-    activityLog = JSON.parse(localStorage.getItem("activityLog") || '{}')
     for (let i of activityLog) {
       if (i.startTime === startTime) {
-        i.stopTime = moment().format("HH:mm:ss");
-        console.log("TCL: stopActivity -> activityLog", activityLog)
-        localStorage.setItem("activityLog", JSON.stringify(activityLog))
+        const stopTime = moment().format("HH:mm:ss");
+        i.stopTime = stopTime
         setDescription("")
+        setActivityLog(activityLog)
         setActivityStarted(!activityStarted);
         break;
       }
     }
   }
+
 
   return (
     <>
@@ -55,7 +50,7 @@ const ClockPanel: React.FC = () => {
             Start Activity
           </button>
         ) : (
-          <button
+            <button
               className="clock-panel__button danger"
               onClick={() => { stopActivity() }}
               disabled={!activityStarted}>

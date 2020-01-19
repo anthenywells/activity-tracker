@@ -1,7 +1,6 @@
 import React from 'react';
 import moment from "moment"
 
-
 const ActivityPanel: React.FC<{ activityLog: any; }> = ({activityLog}) => {
 
   const formatDuration = (duration: number) => {
